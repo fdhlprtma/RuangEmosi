@@ -1,0 +1,277 @@
+/* Mood Tracker Styles */
+.mood-tracker {
+  padding: 60px 0;
+}
+
+.mood-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .mood-grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+.mood-form-card, .mood-chart-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.mood-options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+  .mood-options {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.mood-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  border: 2px solid transparent;
+}
+
+.mood-option i {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.mood-option span {
+  font-size: 0.9rem;
+}
+
+.mood-option:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="radio"]:checked + .mood-option {
+  border-color: var(--primary-color);
+  background-color: rgba(108, 99, 255, 0.1);
+}
+
+/* Warna untuk setiap mood */
+.very-happy { color: #28A745; }
+.happy { color: #20C997; }
+.neutral { color: #FFC107; }
+.sad { color: #FD7E14; }
+.very-sad { color: #DC3545; }
+.angry { color: #DC3545; }
+.anxious { color: #6F42C1; }
+
+/* History Styles */
+.mood-history {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.history-filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.history-filters select, .history-filters button {
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 1px solid #CED4DA;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.history-entry {
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.history-entry:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.entry-mood {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.entry-mood i {
+  font-size: 1.2rem;
+}
+
+.entry-date {
+  text-align: center;
+}
+
+.day-name {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--gray-color);
+}
+
+.day-number {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.entry-notes {
+  padding-top: 10px;
+  border-top: 1px solid #E9ECEF;
+  font-size: 0.9rem;
+  color: var(--gray-color);
+}
+
+/* Consultation Styles */
+.consultation-section {
+  padding: 60px 0;
+}
+
+.consultation-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.option-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.option-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.option-card h3 {
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.option-card h3 i {
+  margin-right: 10px;
+}
+
+.option-card p {
+  margin-bottom: 20px;
+  color: var(--gray-color);
+}
+
+.counselor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.counselor-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.counselor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.counselor-photo {
+  height: 200px;
+  overflow: hidden;
+}
+
+.counselor-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.counselor-info {
+  padding: 20px;
+}
+
+.counselor-info h4 {
+  margin-bottom: 5px;
+  color: var(--dark-color);
+}
+
+.specialization {
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.rating {
+  color: #FFC107;
+  margin-bottom: 10px;
+}
+
+.rating span {
+  color: var(--gray-color);
+  font-size: 0.9rem;
+}
+
+.session-count {
+  font-size: 0.8rem;
+  color: var(--gray-color);
+  margin-bottom: 15px;
+}
+
+.bio {
+  font-size: 0.9rem;
+  color: var(--gray-color);
+  margin-bottom: 15px;
+}
+
+.counselor-actions {
+  padding: 0 20px 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.counselor-actions .btn {
+  flex: 1;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+}
